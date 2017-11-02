@@ -9,8 +9,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     restart: always
+
   cachet:
-    image: cachet:2.4
+    image: cachet:2.3
     ports:
       - 80:8000
     links:
@@ -23,9 +24,20 @@ services:
       - DB_USERNAME=postgres
       - DB_PASSWORD=postgres
       - DB_PREFIX=chq_
-      - APP_KEY=${APP_KEY:-null}
+      - APP_KEY=base64:qFARZ0BKHMIkxXov19zQvdUv+5Dyx1N7hHFl5EnXwJo=
       - APP_LOG=errorlog
       - DEBUG=false
     depends_on:
       - postgres
+    restart: on-failure
+
+  cachet-monitor:
+    image: cachet-monitor:0.1
+    ports:
+      - 8080:80
+      - 8443:443
+    links:
+      - cachet:cachet
+    depends_on:
+      - cachet
     restart: on-failure

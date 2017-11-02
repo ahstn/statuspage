@@ -1,16 +1,16 @@
 api:
-  url: https://demo.cachethq.io/api/v1
-  token: 9yMHsdioQosnyVK4iCVR
+  url: http://cachet:8000/api/v1
+  token: CQ3f6IwLr6QGwCl1k5Tk #${API-KEY}
   insecure: false
   date_format: 02/01/2006 15:04:05 GMT # https://golang.org/src/time/format.go#L57
 monitors:
   - name: google
     target: https://google.com
     strict: true
-    method: POST
+    method: GET
 
     component_id: 1
-    metric_id: 4
+    metric_id: 1
 
     template:
       investigating:
@@ -19,7 +19,6 @@ monitors:
       fixed:
         subject: "I HAVE BEEN FIXED"
 
-
     interval: 1   # seconds between checks
     timeout: 1    # seconds for timeout
     threshold: 80 # If % of downtime is over this threshold, open an incident
@@ -27,4 +26,3 @@ monitors:
     headers:
       Authorization: Basic <hash>
     expected_status_code: 200
-    expected_body: "P.*NG"
