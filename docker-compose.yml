@@ -23,7 +23,6 @@ services:
       - DB_DATABASE=postgres
       - DB_USERNAME=postgres
       - DB_PASSWORD=postgres
-      - DB_PREFIX=chq_
       - APP_KEY=base64:qFARZ0BKHMIkxXov19zQvdUv+5Dyx1N7hHFl5EnXwJo=
       - APP_LOG=errorlog
       - DEBUG=false
