@@ -19,8 +19,8 @@ monitors:
       fixed:
         subject: "I HAVE BEEN FIXED"
 
-    interval: 1   # seconds between checks
-    timeout: 1    # seconds for timeout
+    interval: 60  # seconds between checks
+    timeout: 2    # seconds for timeout
     threshold: 80 # If % of downtime is over this threshold, open an incident
 
     headers:
