@@ -1,0 +1,30 @@
+api:
+  url: https://demo.cachethq.io/api/v1
+  token: 9yMHsdioQosnyVK4iCVR
+  insecure: false
+  date_format: 02/01/2006 15:04:05 GMT # https://golang.org/src/time/format.go#L57
+monitors:
+  - name: google
+    target: https://google.com
+    strict: true
+    method: POST
+
+    component_id: 1
+    metric_id: 4
+
+    template:
+      investigating:
+        subject: "{{ .Monitor.Name }} - {{ .SystemName }}"
+        message: "{{ .Monitor.Name }} check **failed** (server time: {{ .now }})\n\n{{ .FailReason }}"
+      fixed:
+        subject: "I HAVE BEEN FIXED"
+
+
+    interval: 1   # seconds between checks
+    timeout: 1    # seconds for timeout
+    threshold: 80 # If % of downtime is over this threshold, open an incident
+
+    headers:
+      Authorization: Basic <hash>
+    expected_status_code: 200
+    expected_body: "P.*NG"
