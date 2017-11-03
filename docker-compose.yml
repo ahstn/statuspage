@@ -41,4 +41,4 @@ services:
       - cachet:cachet
     depends_on:
       - cachet
-    restart: on-failure
+    restart: always
