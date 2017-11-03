@@ -10,7 +10,7 @@ require a full rebuild of the image, unless you use volumes.
 This isn't nice and I intend to find a more customisable solution.
 
 I'd also like to make the image take advantage of Docker's ONBUILD features,
-pulling from the [CastawayLabs/cachet-monitor] repo, complining from source and
+pulling from the [CastawayLabs/cachet-monitor] repo, compiling from source and
 building an image from scratch rather than from [Alpine].
 
 [CastawayLabs/cachet-monitor]: https://github.com/CastawayLabs/cachet-monitor
