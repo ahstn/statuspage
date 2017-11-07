@@ -29,6 +29,7 @@ docker build -t cachet-monitor:0.1 cachet-monitor/
 ```shell
 docker-compose up
 ```
+By default, `cachet` runs on on port 80 and the credentials are `admin:admin` (username:password)
 
 [Cachet]: https://cachethq.io/
 [Cachet-Docker]: https://github.com/CachetHQ/Docker
