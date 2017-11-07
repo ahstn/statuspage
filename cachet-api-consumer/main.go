@@ -24,4 +24,6 @@ func main() {
 	logrus.Debug("Configuration valid")
 	logrus.Infof("API: %s", arguments["--url"])
 	logrus.Infof("Config: %s", arguments["--config"])
+
+	getCurrencies()
 }
