@@ -153,6 +153,6 @@ SELECT pg_catalog.setval('tags_id_seq', 1, true);
 
 
 COPY users (id, username, password, remember_token, email, api_key, active, level, created_at, updated_at, google_2fa_secret) FROM stdin;
-1	admin	$2y$10$9nEvKuAQ4SzgNFQ8Kc4CSObgRLeMCQuDgxetwlW13Lmv8qpcHQLia	\N	adamhouston_@live.co.uk	CQ3f6IwLr6QGwCl1k5Tk	t	1	2017-11-02 16:27:30	2017-11-02 16:27:30	\N
+1	admin	$2y$10$9nEvKuAQ4SzgNFQ8Kc4CSObgRLeMCQuDgxetwlW13Lmv8qpcHQLia	\N	test@test.com	CQ3f6IwLr6QGwCl1k5Tk	t	1	2017-11-02 16:27:30	2017-11-02 16:27:30	\N
 \.
 SELECT pg_catalog.setval('users_id_seq', 1, true);
