@@ -13,7 +13,7 @@ services:
     restart: always
 
   cachet:
-    image: cachet:2.3
+    image: cachethq/docker:2.3-latest
     ports:
       - 80:8000
     links:
