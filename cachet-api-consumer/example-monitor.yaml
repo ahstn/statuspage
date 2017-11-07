@@ -1,0 +1,16 @@
+api:
+  url: http://cachet:8000/api/v1
+  token: CQ3f6IwLr6QGwCl1k5Tk #${API-KEY}
+  insecure: false
+  date_format: 02/01/2006 15:04:05 GMT # https://golang.org/src/time/format.go#L57
+monitors:
+  - name: coinmarketcap
+    target: https://api.coinmarketcap.com/v1/global/
+    strict: true
+    method: GET
+    component_id: 1               # component linked to metric (optional)
+    metric_id: 1                  # metric to forward data to
+    interval: 60                  # seconds between checks
+    timeout: 2                    # seconds for timeout
+    field: total_24h_volume_usd   # field to fetch from external api
+
