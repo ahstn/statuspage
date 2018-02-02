@@ -2,6 +2,9 @@
 Distribution of of [Cachet] aiming to provide a fully automated monitoring Docker stack utilising
 their official [Cachet-Docker] image, [Cachet-Monitor] and a custom service(TODO) for more advanced metrics.
 
+### Unmaintained
+Due to the nature and heavy-work load of University final year, I haven't had a chance to continue development on this project. However once I complete my final year I intend to start back into developing this.
+
 ### Requirements
 - Docker Engine ([install script](https://docs.docker.com/engine/installation/linux/docker-ce/centos/#install-using-the-convenience-script))
 - Docker Compose ([install](https://docs.docker.com/compose/install/))
