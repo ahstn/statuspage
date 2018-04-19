@@ -1,6 +1,6 @@
 api:
   url: http://cachet:8000/api/v1
-  token: CQ3f6IwLr6QGwCl1k5Tk #${API-KEY}
+  token: CQ3f6IwLr6QGwCl1k5Tk # ${API-KEY} - TODO: CACHET_TOKEN environment variable
   insecure: false
   date_format: 02/01/2006 15:04:05 GMT # https://golang.org/src/time/format.go#L57
 monitors:
